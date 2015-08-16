@@ -298,8 +298,8 @@ abstract class AbstractMagentoCommand extends Command
      *
      * when using a path value that has been created in a cygwin shell but then PHP uses it inside a cmd shell it needs
      * to be filtered.
-
-     * @param $path
+     *
+     * @param  string $path
      * @return string
      */
     protected function normalizePath($path)
@@ -555,8 +555,8 @@ abstract class AbstractMagentoCommand extends Command
     }
 
     /**
-     * @param $argument
-     * @param null $message
+     * @param string $argument
+     * @param string $message [optional]
      * @return string
      */
     protected function getArgumentMessage($argument, $message = null)

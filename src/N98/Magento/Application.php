@@ -141,7 +141,7 @@ class Application extends BaseApplication
     }
 
     /**
-     * @return \Symfony\Component\Console\Input\InputDefinition|void
+     * @return \Symfony\Component\Console\Input\InputDefinition
      */
     protected function getDefaultInputDefinition()
     {
@@ -393,7 +393,7 @@ class Application extends BaseApplication
      * @TODO Move logic into "EventSubscriber"
      *
      * @param OutputInterface $output
-     * @return bool
+     * @return null|false
      */
     public function checkVarDir(OutputInterface $output)
     {
@@ -782,6 +782,8 @@ class Application extends BaseApplication
     /**
      * use require-once inside a function with it's own variable scope w/o any other variables
      * and $this unbound.
+     *
+     * @param string $path
      */
     private function requireOnce($path)
     {
