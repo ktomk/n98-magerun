@@ -2,6 +2,8 @@
 
 namespace N98\Magento\Command\Installer;
 
+use Composer\Composer;
+use Composer\Package\CompletePackage;
 use N98\Magento\Command\AbstractMagentoCommand;
 use N98\Util\Database as DatabaseUtils;
 use N98\Util\Filesystem;
@@ -264,13 +266,13 @@ HELP;
     /**
      * construct a folder to where magerun will download the source to, cache git/hg repositories under COMPOSER_HOME
      *
-     * @param $composer
-     * @param $package
+     * @param Composer $composer
+     * @param CompletePackage $package
      * @param $installationFolder
      *
      * @return string
      */
-    protected function getTargetFolderByType($composer, $package, $installationFolder)
+    protected function getTargetFolderByType(Composer $composer, CompletePackage $package, $installationFolder)
     {
         $type = $package->getSourceType();
         if ($this->isSourceTypeRepository($type)) {
