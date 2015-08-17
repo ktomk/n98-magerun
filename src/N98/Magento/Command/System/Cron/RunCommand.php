@@ -61,7 +61,7 @@ HELP;
 
             if ($runConfig->model) {
 
-                if (!preg_match(self::REGEX_RUN_MODEL, (string)$runConfig->model, $run)) {
+                if (!preg_match(self::REGEX_RUN_MODEL, (string) $runConfig->model, $run)) {
                     throw new \RuntimeException('Invalid model/method definition, expecting "model/class::method".');
                 }
                 if (!($model = \Mage::getModel($run[1])) || !method_exists($model, $run[2])) {
@@ -112,14 +112,14 @@ HELP;
     protected function askJobCode(InputInterface $input, OutputInterface $output, $jobs)
     {
         foreach ($jobs as $key => $job) {
-            $question[] = '<comment>[' . ($key+1) . ']</comment> ' . $job['Job'] . PHP_EOL;
+            $question[] = '<comment>[' . ($key + 1) . ']</comment> ' . $job['Job'] . PHP_EOL;
         }
         $question[] = '<question>Please select job: </question>' . PHP_EOL;
 
         $jobCode = $this->getHelperSet()->get('dialog')->askAndValidate(
             $output,
             $question,
-            function ($typeInput) use ($jobs) {
+            function($typeInput) use ($jobs) {
                 if (!isset($jobs[$typeInput - 1])) {
                     throw new \InvalidArgumentException('Invalid job');
                 }

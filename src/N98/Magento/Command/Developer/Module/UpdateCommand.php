@@ -461,11 +461,11 @@ class UpdateCommand extends AbstractMagentoCommand
         $entityName = true;
 
         while ($entityName) {
-            $entityName =  trim($dialog->ask($output, '<question>Entity Name (leave blank to exit):</question>'));
+            $entityName = trim($dialog->ask($output, '<question>Entity Name (leave blank to exit):</question>'));
             if (!$entityName) {
                 break;
             }
-            $entityTable =  trim($dialog->ask($output, '<question>Entity Table:</question>'));
+            $entityTable = trim($dialog->ask($output, '<question>Entity Table:</question>'));
             $this->configNodes['resource_entities'][$entityName] = $entityTable;
         }
     }

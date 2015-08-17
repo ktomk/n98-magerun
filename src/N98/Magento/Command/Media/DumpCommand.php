@@ -49,7 +49,7 @@ class DumpCommand extends AbstractMagentoCommand
             $filename .= '/';
         }
         if (empty($filename) || is_dir($filename)) {
-            $filename .= 'media_'. date('Ymd_his') . '.zip';
+            $filename .= 'media_' . date('Ymd_his') . '.zip';
         }
 
         $zip = new \ZipArchive();
