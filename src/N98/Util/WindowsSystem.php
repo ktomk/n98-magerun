@@ -82,7 +82,7 @@ class WindowsSystem
     /**
      * a program (by it's basename) is available on system for execution
      *
-     * @param $program
+     * @param string $program
      * @return bool
      */
     public static function isProgramInstalled($program)

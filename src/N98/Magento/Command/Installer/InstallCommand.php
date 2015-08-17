@@ -3,7 +3,6 @@
 namespace N98\Magento\Command\Installer;
 
 use N98\Magento\Command\AbstractMagentoCommand;
-use N98\Util\Console\Helper\MagentoHelper;
 use N98\Util\Database as DatabaseUtils;
 use N98\Util\Filesystem;
 use N98\Util\OperatingSystem;

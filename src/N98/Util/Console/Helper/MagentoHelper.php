@@ -132,7 +132,7 @@ class MagentoHelper extends AbstractHelper
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getMajorVersion()
     {

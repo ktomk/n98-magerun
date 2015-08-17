@@ -246,7 +246,7 @@ HELP;
     /**
      * @param InputInterface $input
      * @param OutputInterface $output
-     * @param $commandString
+     * @param string $commandString
      * @throws \RuntimeException
      */
     protected function runMagerunCommand(InputInterface $input, OutputInterface $output, $commandString)
@@ -262,7 +262,7 @@ HELP;
 
     /**
      * @param string $commandString
-     * @return mixed|string
+     * @return string
      */
     protected function _prepareShellCommand($commandString)
     {
@@ -311,7 +311,7 @@ HELP;
 
     /**
      * @param $commandString
-     * @return mixed
+     * @return string
      */
     protected function _replaceScriptVars($commandString)
     {
