@@ -205,7 +205,8 @@ HELP;
                     return $this->scriptVars[$matches[1]];
                 }
 
-                $dialog = $this->getHelperSet()->get('dialog'); /* @var $dialog DialogHelper */
+                /* @var $dialog DialogHelper */
+                $dialog = $this->getHelperSet()->get('dialog');
 
                 /**
                  * Check for select "?["
@@ -310,7 +311,8 @@ HELP;
     }
 
     /**
-     * @param $commandString
+     * @param string $commandString
+     *
      * @return string
      */
     protected function _replaceScriptVars($commandString)

@@ -58,7 +58,8 @@ class WindowsSystem
     /**
      * a name is executable based on it's extension
      *
-     * @param $name
+     * @param string $name
+     *
      * @return bool
      */
     public static function isExecutableName($name)

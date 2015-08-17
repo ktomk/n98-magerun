@@ -352,7 +352,7 @@ PHP;
     }
 
     /**
-     * @param $group
+     * @param string $group
      * @return \Mage_Core_Model_Config_Element
      */
     protected function getGroupXmlDefinition($group)
