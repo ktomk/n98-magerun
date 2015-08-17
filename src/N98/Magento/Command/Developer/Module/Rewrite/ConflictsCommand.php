@@ -2,9 +2,7 @@
 
 namespace N98\Magento\Command\Developer\Module\Rewrite;
 
-use N98\Magento\Command\AbstractMagentoCommand;
 use N98\JUnitXml\Document as JUnitXmlDocument;
-use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;

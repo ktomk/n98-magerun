@@ -117,6 +117,9 @@ HELP;
         return $return;
     }
 
+    /**
+     * @param string $targetName
+     */
     protected function _getBasePathFromTargetName($targetName)
     {
         $paths = array(
@@ -273,7 +276,7 @@ HELP;
     }
 
     /**
-     * @return array
+     * @return string[]
      */
     protected function _getBasePackages()
     {
