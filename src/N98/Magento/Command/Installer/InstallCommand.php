@@ -200,7 +200,7 @@ HELP;
             } elseif ($input->getOption('magentoVersionByName')) {
                 foreach ($this->commandConfig['magento-packages'] as $key => $package) {
                     if ($package['name'] == $input->getOption('magentoVersionByName')) {
-                        $type = $key+1;
+                        $type = $key + 1;
                         break;
                     }
                 }
@@ -358,7 +358,7 @@ HELP;
                 $this->config['db_port'] = $dialog->askAndValidate($output, '<question>Please enter the database port </question> <comment>[' . $dbPortDefault . ']</comment>: ', $this->notEmptyCallback, false, $dbPortDefault);
 
                 $dbPrefixDefault = $input->getOption('dbPrefix') ? $input->getOption('dbPrefix') : '';
-                $this->config['db_prefix'] = $dialog->ask($output, '<question>Please enter the table prefix</question> <comment>['. $dbPrefixDefault .']</comment>:', $dbPrefixDefault);
+                $this->config['db_prefix'] = $dialog->ask($output, '<question>Please enter the table prefix</question> <comment>[' . $dbPrefixDefault . ']</comment>:', $dbPrefixDefault);
                 $db = $this->validateDatabaseSettings($output, $input);
             } while ($db === false);
         }
@@ -405,7 +405,7 @@ HELP;
     protected function installSampleData(InputInterface $input, OutputInterface $output)
     {
         $magentoPackage = $this->config['magentoPackage']; /* @var $magentoPackage \Composer\Package\MemoryPackage */
-        $extra  = $magentoPackage->getExtra();
+        $extra = $magentoPackage->getExtra();
         if (!isset($extra['sample-data'])) {
             return;
         }
@@ -607,7 +607,7 @@ HELP;
             if (!preg_match('|^http(s)?://[a-z0-9-]+(.[a-z0-9-]+)*(:[0-9]+)?(/.*)?$|i', $input)) {
                 throw new \InvalidArgumentException('Please enter a valid URL');
             }
-            if (parse_url($input, \PHP_URL_HOST) ==  'localhost') {
+            if (parse_url($input, \PHP_URL_HOST) == 'localhost') {
                 throw new \InvalidArgumentException('localhost cause problems! Please use 127.0.0.1 or another hostname');
             }
             return $input;
