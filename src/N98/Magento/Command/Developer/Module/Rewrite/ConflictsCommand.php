@@ -154,7 +154,7 @@ HELP;
                 if (class_exists($classes[$i])
                     && class_exists($classes[$i + 1])
                 ) {
-                    if (!is_a($classes[$i], $classes[$i + 1], true)) {
+                    if (! is_a($classes[$i], $classes[$i + 1], true)) {
                         return true;
                     }
                 }

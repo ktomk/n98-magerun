@@ -26,9 +26,9 @@ class DateTime
         $seconds = $interval->format('%s');
 
         $differenceString = (($years) ? $years . 'Y ' : '')
-                          . (($months) ? $months . 'M ' : '')
-                          . (($days) ? $days . 'd ' : '')
-                          . (($hours) ? $hours . 'h ' : '')
+                          . (($months) ? $months. 'M ' : '')
+                          . (($days) ? $days. 'd ' : '')
+                          . (($hours) ? $hours. 'h ' : '')
                           . (($minutes) ? $minutes . 'm ' : '')
                           . (($seconds) ? $seconds . 's' : '');
 
