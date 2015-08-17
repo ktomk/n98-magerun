@@ -93,7 +93,7 @@ HELP;
 
             $collection->addOrder('scope_id', 'ASC');
 
-            if($collection->count() == 0) {
+            if ($collection->count() == 0) {
                 $output->writeln(sprintf("Couldn't find a config value for \"%s\"", $input->getArgument('path')));
                 return;
             }
