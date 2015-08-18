@@ -25,12 +25,12 @@ class DateTime
         $minutes = $interval->format('%i');
         $seconds = $interval->format('%s');
 
-        $differenceString = (($years) ? $years . 'Y ' : '')
-                          . (($months) ? $months. 'M ' : '')
-                          . (($days) ? $days. 'd ' : '')
-                          . (($hours) ? $hours. 'h ' : '')
-                          . (($minutes) ? $minutes . 'm ' : '')
-                          . (($seconds) ? $seconds . 's' : '');
+        $differenceString = ($years ? $years . 'Y ' : '')
+                          . ($months ? $months . 'M ' : '')
+                          . ($days ? $days . 'd ' : '')
+                          . ($hours ? $hours . 'h ' : '')
+                          . ($minutes ? $minutes . 'm ' : '')
+                          . ($seconds ? $seconds . 's' : '');
 
         return trim($differenceString);
     }
