@@ -503,6 +503,11 @@ abstract class AbstractMagentoCommand extends Command
         \chdir($this->config['installationFolder']);
     }
 
+    /**
+     * @param string $type
+     *
+     * @return bool
+     */
     protected function isSourceTypeRepository($type)
     {
         return in_array($type, array('git', 'hg'));

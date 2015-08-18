@@ -18,9 +18,9 @@ use Symfony\Component\Validator\ConstraintValidatorFactory;
 class ParameterHelper extends AbstractHelper
 {
     /**
-     * @var
+     * @var Validator
      */
-    protected $validator = null;
+    protected $validator;
 
     /**
      * Returns the canonical name of this helper.
@@ -178,18 +178,18 @@ class ParameterHelper extends AbstractHelper
     }
 
     /**
-     * @param \Symfony\Component\Console\Output\OutputInterface $output
-     * @param string $argumentName
-     * @param string $value
-     * @param $constraints
+     * @param OutputInterface $output
+     * @param                 $name
+     * @param string          $value
+     * @param                 $constraints
+     *
      * @return mixed
-     * @throws \InvalidArgumentException
+     * @internal param string $argumentName
      */
     protected function _validateArgument(OutputInterface $output, $name, $value, $constraints)
     {
-        $this->initValidator();
-        $validator = $this->validator;
-        $errors = null;
+        $validator = $this->initValidator();
+        $errors    = null;
 
         if (!empty($value)) {
             $errors = $validator->validateValue(array($name => $value), $constraints);
@@ -217,6 +217,9 @@ class ParameterHelper extends AbstractHelper
         return $value;
     }
 
+    /**
+     * @return Validator
+     */
     protected function initValidator()
     {
         if ($this->validator == null) {

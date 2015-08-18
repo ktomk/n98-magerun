@@ -95,7 +95,7 @@ abstract class AbstractEntityType
      *
      * @return array
      */
-    protected function getOptions($attribute)
+    protected function getOptions(Mage_Eav_Model_Entity_Attribute $attribute)
     {
         $select = $this->readConnection->select()
             ->from(array('o' => \Mage::getSingleton('core/resource')->getTableName('eav_attribute_option')))
