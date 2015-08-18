@@ -98,7 +98,7 @@ HELP;
                     $this->_allVariables['Handler_read_first'] +
                     $this->_allVariables['Handler_read_next'] + $this->_allVariables['Handler_read_key'] +
                     $this->_allVariables['Handler_read_prev']));
-            $rows[]        = array(
+            $rows[] = array(
                 'Full table scans',
                 sprintf('%.2f', $tableScanRate * 100) . '%',
                 $this->formatDesc('HINT: "Handler_read_rnd_next" is reset to zero when reached the value of 2^32 (4G).')

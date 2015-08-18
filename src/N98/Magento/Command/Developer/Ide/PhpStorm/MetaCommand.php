@@ -379,9 +379,9 @@ PHP;
                         break;
                 }
 
-                $moduleXmlDefinition = '<'. strtolower($moduleName) .'>'
-                    . '   <class>Mage_' . $moduleName . '_' . $groupClassType .'</class>'
-                    . '</' . strtolower($moduleName). '>';
+                $moduleXmlDefinition = '<' . strtolower($moduleName) . '>'
+                    . '   <class>Mage_' . $moduleName . '_' . $groupClassType . '</class>'
+                    . '</' . strtolower($moduleName) . '>';
                 $children = new \Varien_Simplexml_Element($moduleXmlDefinition);
                 $definitions->appendChild($children);
             }

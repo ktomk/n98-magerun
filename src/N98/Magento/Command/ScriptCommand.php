@@ -163,7 +163,7 @@ HELP;
                 if (isset($parts[1])) {
                     $value = $parts[1];
                 }
-                $this->scriptVars['${' . $variable. '}'] = $value;
+                $this->scriptVars['${' . $variable . '}'] = $value;
             }
         }
     }

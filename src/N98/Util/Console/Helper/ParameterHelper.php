@@ -204,7 +204,7 @@ class ParameterHelper extends AbstractHelper
             $value = $this->getHelperSet()->get('dialog')->askAndValidate(
                 $output,
                 $question,
-                function ($typeInput) use ($validator, $constraints, $name) {
+                function($typeInput) use ($validator, $constraints, $name) {
                     $errors = $validator->validateValue(array($name => $typeInput), $constraints);
                     if (count($errors) > 0) {
                         throw new \InvalidArgumentException($errors[0]->getMessage());
