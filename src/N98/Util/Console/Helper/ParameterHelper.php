@@ -8,6 +8,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\Output;
 use Symfony\Component\Translation\Translator;
+use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\Validator;
 use Symfony\Component\Validator\Constraints;
 use Symfony\Component\Validator\ConstraintValidatorFactory;
@@ -178,10 +179,10 @@ class ParameterHelper extends AbstractHelper
     }
 
     /**
-     * @param OutputInterface $output
-     * @param                 $name
-     * @param string          $value
-     * @param                 $constraints
+     * @param OutputInterface         $output
+     * @param string                  $name
+     * @param string                  $value
+     * @param Constraint|Constraint[] $constraints
      *
      * @return mixed
      * @internal param string $argumentName
