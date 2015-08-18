@@ -78,7 +78,7 @@ class DbCommand extends AbstractLogCommand
             $newValue = ($currentValue == 'false') ? 'true' : 'false';
         }
 
-        $output->writeln("<info>Changed <comment>" . $variable . "</comment> to <comment>" . $newValue  . "</comment></info>");
+        $output->writeln("<info>Changed <comment>" . $variable . "</comment> to <comment>" . $newValue . "</comment></info>");
 
         $contents = preg_replace($debugLinePattern, "protected " . $variable . " = " . $newValue, $contents);
         file_put_contents($varienAdapterPhpFile, $contents);

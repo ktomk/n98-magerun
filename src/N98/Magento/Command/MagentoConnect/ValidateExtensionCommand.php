@@ -110,7 +110,7 @@ HELP;
             $return = array();
             foreach ($files as $file) {
                 $path = $this->_getPathOfFileNodeToTarget($file);
-                $return[$path] = (string)$file['hash'];
+                $return[$path] = (string) $file['hash'];
             }
         }
 
@@ -148,7 +148,7 @@ HELP;
     protected function _getPathOfFileNodeToTarget($node, $path = '')
     {
         if ($node->getName() == 'target') {
-            return $this->_getBasePathFromTargetName((string)$node['name']) . $path;
+            return $this->_getBasePathFromTargetName((string) $node['name']) . $path;
         }
 
         $path = '/' . $node['name'] . $path;
@@ -176,7 +176,7 @@ HELP;
     protected function getPathOfFileNodeToTarget($node, $path = '')
     {
         if ($node->getName() == 'target') {
-            return $this->_getBasePathFromTargetName((string)$node['name']) . $path;
+            return $this->_getBasePathFromTargetName((string) $node['name']) . $path;
         }
 
         $path = '/' . $node['name'] . $path;

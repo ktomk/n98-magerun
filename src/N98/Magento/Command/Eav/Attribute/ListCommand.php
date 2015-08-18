@@ -57,10 +57,10 @@ class ListCommand extends AbstractMagentoCommand
                 $row[] = $entityType;
                 $row[] = $attribute->getFrontendLabel();
 
-                if ($input->getOption('add-source'))  {
+                if ($input->getOption('add-source')) {
                     $row[] = $attribute->getSourceModel() ? $attribute->getSourceModel() : '';
                 }
-                if ($input->getOption('add-backend'))  {
+                if ($input->getOption('add-backend')) {
                     $row[] = $attribute->getBackendType();
                 }
 
@@ -72,10 +72,10 @@ class ListCommand extends AbstractMagentoCommand
             $headers[] = 'id';
             $headers[] = 'entity_type';
             $headers[] = 'label';
-            if ($input->getOption('add-source'))  {
+            if ($input->getOption('add-source')) {
                 $headers[] = 'source';
             }
-            if ($input->getOption('add-backend'))  {
+            if ($input->getOption('add-backend')) {
                 $headers[] = 'backend_type';
             }
 
