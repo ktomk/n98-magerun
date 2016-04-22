@@ -18,6 +18,9 @@ Build phar with:
         <include name="config.yaml" />
         <include name="MIT-LICENSE.txt" />
     </fileset>
+    <fileset dir="shared/src" id="shared_src_folder">
+        <include name="**/**" />
+    </fileset>
     <fileset dir="src"  id="src_folder">
         <include name="**/**" />
     </fileset>
@@ -81,6 +84,7 @@ Build phar with:
                 </element>
             </metadata>
             <fileset refid="root_folder" />
+            <fileset refid="shared_src_folder" />
             <fileset refid="src_folder" />
             <fileset refid="res_folder" />
             <fileset refid="vendor_folder" />

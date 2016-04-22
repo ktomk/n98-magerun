@@ -26,6 +26,9 @@
         "mikey179/vfsStream": "~1.4"
     },
     "autoload": {
+        "psr-4": {
+            "N98\\": "shared/src"
+        },
         "psr-0": {
             "N98": "src",
             "Composer": "src"
