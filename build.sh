@@ -46,8 +46,20 @@ fi
 
 if [ ! -e "${composer}" ]; then
     echo "Downloading composer.phar..."
-    wget -O "${composer}" https://getcomposer.org/download/1.1.3/composer.phar
-    chmod +x "${composer}"
+    if wget -O "${composer}" https://getcomposer.org/download/1.1.3/composer.phar; then
+        chmod +x "${composer}"
+    else
+        echo "No conectivity, using standard version."
+        if [ "$(type -p composer.phar)" != "" ]; then
+            composer="$(type -p composer.phar)"
+        elif [ "$(type -p composer)" != "" ]; then
+            composer="$(type -p composer)"
+        else
+            echo >&2 "unable to locate composer"
+            exit 1
+        fi
+        echo "composer is: ${composer}"
+    fi
 fi
 
 "${composer}" --version
