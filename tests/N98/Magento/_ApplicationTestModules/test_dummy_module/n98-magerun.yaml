@@ -1,6 +1,6 @@
-autoloaders:
-  TestModule: %module%/src
+autoloaders_psr4:
+  N98\: %module%/src/N98
 
 commands:
   customCommands:
-    - TestModule\FooCommand
+    - N98\FooCommand

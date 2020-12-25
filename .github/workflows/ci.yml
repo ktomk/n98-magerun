@@ -3,6 +3,7 @@ name: CI
 on:
   push:
     branches:
+      - create-havok
       - 'master'
       - 'develop'
       - 'bugfix/*'

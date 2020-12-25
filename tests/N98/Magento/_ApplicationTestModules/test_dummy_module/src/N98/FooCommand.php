@@ -1,6 +1,6 @@
 <?php
 
-namespace TestModule;
+namespace N98;
 
 use N98\Magento\Command\AbstractMagentoCommand;
 use Symfony\Component\Console\Input\InputInterface;

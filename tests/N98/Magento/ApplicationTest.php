@@ -110,7 +110,7 @@ class ApplicationTest extends TestCase
         $application->init($injectConfig);
 
         // Check for module command
-        $this->assertInstanceOf('TestModule\FooCommand', $application->find('testmodule:foo'));
+        $this->assertInstanceOf('N98\FooCommand', $application->find('testmodule:foo'));
     }
 
     public function testComposer()
