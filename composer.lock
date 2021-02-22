@@ -561,10 +561,6 @@
                 }
             ],
             "description": "JUnit XML Document generation library",
-            "support": {
-                "issues": "https://github.com/cmuench/junit-xml/issues",
-                "source": "https://github.com/cmuench/junit-xml/tree/1.1.0"
-            },
             "time": "2020-12-25T09:08:58+00:00"
         },
         {
@@ -1852,21 +1848,21 @@
     "packages-dev": [
         {
             "name": "bamarni/symfony-console-autocomplete",
-            "version": "v1.4.0",
+            "version": "v1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bamarni/symfony-console-autocomplete.git",
-                "reference": "32995c7d60cc2bc47589eea3d2285b2648b558c8"
+                "reference": "f07271bcacbceb92efeec6d680520d8421cdb9e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bamarni/symfony-console-autocomplete/zipball/32995c7d60cc2bc47589eea3d2285b2648b558c8",
-                "reference": "32995c7d60cc2bc47589eea3d2285b2648b558c8",
+                "url": "https://api.github.com/repos/bamarni/symfony-console-autocomplete/zipball/f07271bcacbceb92efeec6d680520d8421cdb9e3",
+                "reference": "f07271bcacbceb92efeec6d680520d8421cdb9e3",
                 "shasum": ""
             },
             "require": {
                 "ext-simplexml": "*",
-                "php": "^7.0",
+                "php": "^7.0|^8.0",
                 "symfony/console": "^2.5|^3|^4|^5",
                 "symfony/process": "^2.5|^3|^4|^5"
             },
@@ -1899,7 +1895,7 @@
                 }
             ],
             "description": "Shell completion for Symfony Console based scripts",
-            "time": "2020-06-24T20:55:54+00:00"
+            "time": "2021-02-21T15:19:47+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -4255,12 +4251,12 @@
             "version": "1.9.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webmozart/assert.git",
+                "url": "https://github.com/webmozarts/assert.git",
                 "reference": "9dc4f203e36f2b486149058bade43c851dd97451"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/9dc4f203e36f2b486149058bade43c851dd97451",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/9dc4f203e36f2b486149058bade43c851dd97451",
                 "reference": "9dc4f203e36f2b486149058bade43c851dd97451",
                 "shasum": ""
             },
